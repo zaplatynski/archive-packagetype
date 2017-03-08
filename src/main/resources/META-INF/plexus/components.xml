@@ -1,0 +1,32 @@
+<component-set>
+    <components>
+        <component>
+            <role>org.apache.maven.lifecycle.mapping.LifecycleMapping</role>
+            <role-hint>archive</role-hint>
+            <implementation>
+                org.apache.maven.lifecycle.mapping.DefaultLifecycleMapping
+            </implementation>
+            <configuration>
+                <phases>
+                    <generate-resources></generate-resources>
+                    <process-resources>org.apache.maven.plugins:maven-resources-plugin:resources</process-resources>
+                    <process-test-resources>org.apache.maven.plugins:maven-resources-plugin:testResources</process-test-resources>
+                    <test-compile>org.apache.maven.plugins:maven-compiler-plugin:testCompile</test-compile>
+                    <test>org.apache.maven.plugins:maven-surefire-plugin:test</test>
+                    <prepare-package>org.apache.maven.plugins:maven-assembly-plugin:single</prepare-package>
+                    <package>org.apache.maven.plugins:maven-assembly-plugin:single</package>
+                    <install>org.apache.maven.plugins:maven-install-plugin:install</install>
+                    <deploy>org.apache.maven.plugins:maven-deploy-plugin:deploy</deploy>
+                </phases>
+            </configuration>
+        </component>
+        <component>
+            <role>org.apache.maven.artifact.handler.ArtifactHandler</role>
+            <role-hint>archive</role-hint>
+            <implementation>org.apache.maven.artifact.handler.DefaultArtifactHandler</implementation>
+            <configuration>
+                <packaging>archive</packaging>
+            </configuration>
+        </component>
+    </components>
+</component-set>
