@@ -22,7 +22,7 @@ In your `pom.xml` add this:
     
         <plugins>
             
-            <!-- make new FSM package type available to Maven -->
+            <!-- make new archive package type available to Maven -->
             <plugin>
                 <groupId>com.github.zaplatynski</groupId>
                 <artifactId>archive-packagetype</artifactId>
