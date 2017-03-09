@@ -50,7 +50,7 @@ In your `pom.xml` add this:
 ```
 Inside the above mentioned `archive.xml` you need to specify the [Maven assembly plugin]
 (http://maven.apache.org/plugins/maven-assembly-plugin/) descriptor to create a typical archive 
-file layout:
+file layout for example:
 ```xml
 <assembly xmlns="http://maven.apache.org/ASSEMBLY/2.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/ASSEMBLY/2.0.0 http://maven.apache.org/xsd/assembly-2.0.0.xsd">
@@ -59,7 +59,12 @@ file layout:
         <format>zip</format>
     </formats>
     <includeBaseDirectory>false</includeBaseDirectory>
-    ...
+    <fileSets>
+        <fileSet>
+            <directory>src/main/resources</directory>
+            <outputDirectory></outputDirectory>
+        </fileSet>
+    </fileSets>
 </assembly>
 ```
 See the [Maven assembly plugin documentation](http://maven.apache.org/plugins/maven-assembly-plugin/assembly.html) for more information.
