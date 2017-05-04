@@ -1,0 +1,4 @@
+title: Maven Archive Package Type
+description: >
+  A Maven archive package type to create an archive like zip or tar.gz.
+theme: jekyll-theme-slate
