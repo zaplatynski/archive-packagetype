@@ -44,7 +44,12 @@ install and deploy. Just use the Maven assembly plugin and do this:
 ## More information
 
 How to use this Maven package type is documented in the GitHub respository' ReadMe
-at [github.com/zaplatynski/archive-packagetype](https://github.com/zaplatynski/archive-packagetype). 
+at [github.com/zaplatynski/archive-packagetype](https://github.com/zaplatynski/archive-packagetype).
+ 
+## Download
+
+The archive package type is available at
+[Maven Central](http://search.maven.org/#artifactdetails%7Ccom.github.zaplatynski%7Carchive-packagetype%7C1.0.0%7Cmaven-plugin).
 
 ##  Disclaimer
 
